@@ -1,0 +1,275 @@
+#certifi{
+   padding-top: 150px;
+   color:yellow;
+   margin-left: 38%;
+   text-transform: capitalize;
+
+
+  }
+.Certifi{
+    margin-top: -20px;
+    background-color: rgb(3, 2, 39);
+}
+
+.card-certificate h1{
+    color: rgb(6, 6, 77);
+}
+h1{
+    color: black;
+}
+#cer{
+    color: yellow;
+    text-align: center;
+    margin-top: 80px;
+    text-transform: capitalize;
+}
+
+.class{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+
+.card-certificate {
+  position: relative;
+  margin-top: 20px;
+  height: 210px;
+  width: 400px;
+  background: rgba(3, 1, 53, 0.932);
+  /* background-color: #fafaf8d5; */
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  /* border-left: 5px solid yellow; */
+}
+
+.card-certificate::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-certificate:hover {
+  transform: scale(1.05);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1),
+              0 12px 20px rgba(0,0,0,0.3);
+    
+}
+
+.card-certificate:hover::before {
+  top: -30%;
+  left: 100%;
+  opacity: 1;
+}
+
+.card-certificate h1 {
+  transition: transform 0.4s ease;
+  color:#FFD700;
+  font-size: large;
+  text-transform: capitalize;
+  text-align: center;
+  transform: translateX(-100%);
+  /* margin-left: 70px; */
+  opacity: 0;
+}
+
+.card-certificate:hover h1 {
+  transform: translateX(0);
+  /* margin-top: 60px; */
+  opacity: 1;
+}
+
+.card-certificate img{
+    height: 80px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 60px;
+    /* margin-top: -40px; */
+}
+
+.card-certificate p{
+    text-transform: capitalize;
+    text-align: center;
+    font-size:20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    margin-top:10px;
+    /* margin-left: 80px; */
+    
+}
+
+.card-certificate a{
+  text-decoration: none;
+}
+
+.certificates {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 70px; /* spacing between cards */
+  padding: 20px;
+   background-color: rgb(3, 2, 39); /* light subtle background */
+}
+
+
+
+/* Hover effect: elegant lift with soft shadow and slight brightness */
+
+
+
+
+
+/* .begin{
+    height: 400px;
+    width: 400px;
+
+} */
+
+.project-card {
+  position: relative;
+  width: 400px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(212, 212, 212, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(109, 96, 96, 0.2);
+}
+
+.project-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.visit-btn {
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.visit-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.project-title {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffcd07;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1rem;
+  position: relative;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: red;
+}
+
+.popup-trigger {
+  cursor: pointer;
+  /* color: #007bff; */
+  /* text-decoration: underline; */
+  font-size: 1rem;
+}
+
+/* .popup-trigger:hover {
+  color: #0056b3;
+} */
+
+
+
+
+
+

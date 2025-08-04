@@ -1,0 +1,117 @@
+/* Overall Page Styling */
+
+/* Contact Section Container */
+.contact-section {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 1000px;
+    background-color: rgb(3, 2, 39);
+}
+
+/* Contact Form Box */
+.contact-container {
+    background-color: rgba(255, 255, 255, 0.034);
+    border-radius: 12px;
+    padding: 30px;
+    height: 750px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+/* Header Styling */
+.contact-container h1 {
+    color: rgb(230, 230, 49);
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    margin-bottom: 30px;
+    font-size: xx-large;
+    color: rgba(255, 217, 0, 0.7);
+}
+
+/* Status Message After Submission */
+.status-message {
+    margin-bottom: 20px;
+    color: rgb(255, 251, 0);
+    font-weight: bold;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Fields */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: xx-large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+
+/* Focus Highlight */
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: rgb(230, 230, 49);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Submit Button Container */
+.contact-button {
+    padding-top: 22px;
+    /* margin-left: -200px; Small space after message textarea */
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    /* margin-top: 220px; */
+    background-color: rgba(255, 217, 0, 0.842);
+    height: 40px;
+    width: 300px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+/* Hover & Disabled States */
+.submit-btn:hover {
+    background-color: rgb(255, 251, 32);
+}
+
+.submit-btn:disabled {
+    background-color: rgba(230, 230, 49, 0.7);
+    cursor: not-allowed;
+}
