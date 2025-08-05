@@ -20,6 +20,7 @@
 .about-image img {
   width: 350px;
   height: 450px;
+  /* margin-top: -90%; */
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 10px 30px rgba(255, 255, 0, 0.2);
@@ -73,4 +74,14 @@
 
 .about a {
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .about-image img {
+    height: 400px;
+    width: 300px;
+    margin-top: -290px;
+    margin-left: 50px;
+
+  }
 }
