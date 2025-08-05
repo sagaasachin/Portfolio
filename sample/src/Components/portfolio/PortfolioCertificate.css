@@ -272,4 +272,28 @@ h1{
 
 
 
+@media (max-width: 600px) {
+  .certificates {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .card-certificate {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .project-img {
+    height: 200px; /* Adjusted for smaller screens */
+  }
+
+  .contact-icon {
+    right: 20px; /* Adjusted for smaller screens */
+    top: 15px; /* Adjusted for smaller screens */
+  }
+}

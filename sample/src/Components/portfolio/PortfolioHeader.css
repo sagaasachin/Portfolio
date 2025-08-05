@@ -183,8 +183,8 @@
       font-size: 2;
     }
     .nav h1 {
-        font-size: 20px;
-        margin-left: -30;
+        font-size: 15px;
+        margin-left: -120px;
     }
     #contact {
         width: 120px;
@@ -193,8 +193,8 @@
     }
 
     #me {
-        margin-left: 13%;
-        font-size: 45px;
+        margin-left: 2.5%;
+        font-size: 35px;
         /* text-align: center; */
     }
 
@@ -206,39 +206,38 @@
     #naan {
         height: 250px;
         width: 250px;
-        margin-left: 20%;
+        margin-left:10%;
     }
 
     .soc {
-        margin-top: -20%;
+        margin-top: 15%;
         margin-left: 5%;
     }
 
     .cv {
-        height: 90px;
-        width: 90px;
-        margin-left: 75%;
+        height: 0px;
+        width: 120px;
+        margin-left: 30%;
         transform: rotate(-0deg);
         box-shadow: 10px 10px 40px black;
-        margin-top: -40%;
+        /* margin-top: -40%; */
         text-align: center;
     }
 
     #cv {
-        font-size: large;
+        font-size:15px;
         padding: 0px;
         ;
     }
 
     .cv h1 {
         margin-top: 10px;  
-        font-size:15px;
+        font-size:10px;
         text-align: center;
         margin-left: -5px;
     }
     .contact-icon{
-        top: 15px;
-        right: 20px;
+      
     }
 }
 
