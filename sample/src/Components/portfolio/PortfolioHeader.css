@@ -206,18 +206,18 @@
     #naan {
         height: 250px;
         width: 250px;
-        margin-left:10%;
+        margin-left: 20%;
     }
 
     .soc {
         margin-top: 15%;
-        margin-left: 5%;
+        margin-left:  15%;
     }
 
     .cv {
         height: 0px;
         width: 120px;
-        margin-left: 30%;
+        margin-left: 40%;
         transform: rotate(-0deg);
         box-shadow: 10px 10px 40px black;
         /* margin-top: -40%; */
