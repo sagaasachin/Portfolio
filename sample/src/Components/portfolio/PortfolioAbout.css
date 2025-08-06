@@ -77,11 +77,16 @@
 }
 
 @media (max-width: 600px) {
+  .about{
+    margin-top: -10px;
+  }
   .about-image img {
-    height: 400px;
+    height: 380px;
     width: 300px;
     margin-top: -290px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    margin-right: 40px;
 
   }
+  
 }

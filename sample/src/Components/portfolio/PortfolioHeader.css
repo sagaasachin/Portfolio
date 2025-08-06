@@ -193,7 +193,7 @@
     }
 
     #me {
-        margin-left: 2.5%;
+        margin-left: 5%;
         font-size: 35px;
         /* text-align: center; */
     }
@@ -236,9 +236,7 @@
         text-align: center;
         margin-left: -5px;
     }
-    .contact-icon{
-      
-    }
+  
 }
 
 

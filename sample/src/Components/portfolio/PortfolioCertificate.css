@@ -131,20 +131,6 @@ h1{
    background-color: rgb(3, 2, 39); /* light subtle background */
 }
 
-
-
-/* Hover effect: elegant lift with soft shadow and slight brightness */
-
-
-
-
-
-/* .begin{
-    height: 400px;
-    width: 400px;
-
-} */
-
 .project-card {
   position: relative;
   width: 400px;
@@ -295,5 +281,15 @@ h1{
   .contact-icon {
     right: 20px; /* Adjusted for smaller screens */
     top: 15px; /* Adjusted for smaller screens */
+  }
+  #certifi{
+  color: yellow;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  margin-left: -10px;
+  margin-top: -90px;
+
+
   }
 }
