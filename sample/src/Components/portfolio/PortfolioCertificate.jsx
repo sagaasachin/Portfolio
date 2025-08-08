@@ -57,7 +57,7 @@ function Certifi() {
 
   const projects = [
     { id: '1', p: 'Online Test Platform', image: online, link: 'https://example.com/test-platform' },
-    { id: '2', p: 'Autospare Parts Website', image: carspare, link: 'https://example.com/carspare' },
+    { id: '2', p: 'Autospare Parts Website', image: carspare, link: 'https://sagaasachin.github.io/Spares/' },
     { id: '3', p: 'E-commerce Website', image: ecom, link: 'https://example.com/ecommerce' },
     { id: '4', p: 'Instagram Clone', image: insta, link: 'https://example.com/instaclone' },
   ];
