@@ -1,11 +1,14 @@
 /* Loader.css */
 .loader {
-  width: 50px;
+  width: 20vmin; /* Scales with viewport size */
   aspect-ratio: 1.154;
-  position: relative;
-  background: conic-gradient(from 120deg at 50% 64%, #0000, #25b09b 1deg 120deg, #0000 121deg);
+  position: fixed; /* Fixed to viewport */
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%); /* Center perfectly */
+  background: conic-gradient(from 120deg at 50% 64%, #0000, #021b66 1deg 120deg, #0000 121deg);
   animation: l27-0 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
-  margin: 100px auto; /* center it */
+  z-index: 9999; /* Ensure on top */
 }
 
 .loader:before,
@@ -44,4 +47,15 @@
   100% {
     transform: rotate(calc(var(--s, 1) * 120deg)) translate(0);
   }
+}
+
+/* Fullscreen overlay background */
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: rgba(255 255 255 / 0.9); /* light overlay, change if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998; /* just below loader */
 }

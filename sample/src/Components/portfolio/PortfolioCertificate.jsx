@@ -13,6 +13,7 @@ import online from '../../assets/online.jpg'
 import carspare from '../../assets/car spare.jpg'
 import ecom from '../../assets/e commerece.jpg'
 import insta from '../../assets/insta.jpg'
+import as from '../../assets/logo.jpg'
 
 //certificate images
 import vc from '../../assets/certificate/vdart.jpg'
@@ -56,10 +57,11 @@ function Certifi() {
   ];
 
   const projects = [
-    { id: '1', p: 'Online Test Platform', image: online, link: 'https://example.com/test-platform' },
-    { id: '2', p: 'Autospare Parts Website', image: carspare, link: 'https://sagaasachin.github.io/Spares/' },
-    { id: '3', p: 'E-commerce Website', image: ecom, link: 'https://example.com/ecommerce' },
-    { id: '4', p: 'Instagram Clone', image: insta, link: 'https://example.com/instaclone' },
+    { id: '1', p: 'AURA SOFTWARES', image: as, link: 'https://sagaasachin.github.io/Company/' },
+    { id: '2', p: 'Online Test Platform', image: online, link: 'https://example.com/test-platform' },
+    { id: '3', p: 'Autospare Parts Website', image: carspare, link: 'https://sagaasachin.github.io/Spares/' },
+    { id: '4', p: 'E-commerce Website', image: ecom, link: 'https://example.com/ecommerce' },
+    { id: '5', p: 'Instagram Clone', image: insta, link: 'https://example.com/instaclone' },
   ];
 
   const certificateCards = certificates.map((certificate) => (
