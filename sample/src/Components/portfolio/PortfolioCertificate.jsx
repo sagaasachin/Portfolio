@@ -27,6 +27,7 @@ import npc from '../../assets/certificate/npc.jpg'
 import guvic from '../../assets/certificate/guvi c.jpg'
 import slc from '../../assets/certificate/sl c.jpg'
 import tecc from '../../assets/certificate/tecc.jpg'
+import sl1c from '../../assets/certificate/sl 1c.jpg'
 
 function Certifi() {
   const [openModal, setOpenModal] = useState(false);
@@ -54,6 +55,7 @@ function Certifi() {
     { id: '9', title: 'View Certificate', img: guvic, p: 'Intro to ChatGPT', image: guvi },
     { id: '10', title: 'View Certificate', img: slc, p: 'Python for Beginners', image: sl },
     { id: '11', title: 'View Certificate', img: tecc, p: 'Python Development', image: tn },
+    { id: '12', title: 'View Certificate', img: sl1c, p: 'Java for Beginners', image: sl },
   ];
 
   const projects = [
