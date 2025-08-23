@@ -80,10 +80,16 @@
   .about{
     margin-top: -10px;
   }
+  .about-text h1{
+    margin-top:-530px;
+  }
+  .about-text p{
+    margin-top: 460px;
+  }
   .about-image img {
     height: 380px;
     width: 300px;
-    margin-top: -290px;
+    margin-top: -100px;
     /* margin-left: 50px; */
     margin-right: 40px;
 
