@@ -29,8 +29,8 @@ function card(){
   { id: "6", title: "MONGODB", image: f, completion: 65 },
   { id: "7", title: "EXPRESS JS", image: g, completion: 60 },
   { id: "8", title: "PYTHON", image: h, completion: 90 },
-  { id: "9", title: "FLUTTER", image: i, completion: 10 },
-  { id: "10", title: "KOTLIN", image: j, completion: 20 },
+  // { id: "9", title: "FLUTTER", image: i, completion: 10 },
+  // { id: "10", title: "KOTLIN", image: j, completion: 20 },
 ];
 
     const final = value.map((x) => (

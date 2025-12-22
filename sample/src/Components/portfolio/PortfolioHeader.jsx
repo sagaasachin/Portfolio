@@ -13,7 +13,10 @@ function Header() {
   return (
     <>
       <div className="header">
-      <h1 id='nav'> <Nav /></h1> 
+        <h1 id="nav">
+          {" "}
+          <Nav />
+        </h1>
 
         {/* Contact Icon */}
         <a href="#cont" className="contact-icon">
@@ -24,18 +27,18 @@ function Header() {
 
         <Typewriter
           textStyle={{
-            fontFamily: 'Georgia',
-            color: 'wheat',
-            fontSize: '28px',
-            marginTop: '10px',
-            textAlign: 'center'
+            fontFamily: "Georgia",
+            color: "wheat",
+            fontSize: "28px",
+            marginTop: "10px",
+            textAlign: "center",
           }}
           startDelay={100}
           cursorColor="yellow"
           multiText={[
             "Entry Level Developer 💻",
             "Creative UI/UX Designer 🎨",
-            "Frontend Developer 🚀"
+            "Frontend Developer 🚀",
           ]}
           multiTextDelay={1500}
           typeSpeed={80}
@@ -51,8 +54,8 @@ function Header() {
         <div className="cv">
           <h1 id="cv">To know about me!!</h1>
           <a
-            href="/Jawahar Sachin_resume.pdf"
-            download="Jawahar Sachin_resume.pdf"
+            href="./Jawahar_Sachin Resume.pdf"
+            download="Jawahar_Sachin_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
