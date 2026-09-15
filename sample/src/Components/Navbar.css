@@ -321,48 +321,61 @@
    --------------------------------------------------------- */
 @media (max-width: 1023px) {
   .navbar {
-    padding: 0.75rem 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 0.75rem 0 !important;
   }
 
   .navbar--scrolled {
-    padding: 0.55rem 0;
+    padding: 0.55rem 0 !important;
   }
 
   .navbar__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding-inline: 14px 16px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    padding-inline: 14px 16px !important;
   }
 
   .navbar__logo {
-    grid-column: auto;
-    justify-self: auto;
-    flex-shrink: 0;
+    grid-column: auto !important;
+    justify-self: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  .navbar__nav {
+    display: none !important;
   }
 
   .navbar__actions {
-    grid-column: auto;
-    justify-self: auto;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    margin-left: auto;
+    grid-column: auto !important;
+    justify-self: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
   }
 
   .navbar__theme-btn {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
+    width: 42px !important;
+    height: 42px !important;
+    flex: 0 0 42px !important;
+    box-sizing: border-box !important;
   }
 
   .navbar__burger {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
+    width: 42px !important;
+    height: 42px !important;
+    flex: 0 0 42px !important;
+    box-sizing: border-box !important;
   }
 }
