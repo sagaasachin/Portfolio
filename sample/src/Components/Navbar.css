@@ -321,6 +321,11 @@
    --------------------------------------------------------- */
 @media (max-width: 1023px) {
   .navbar {
+    position: fixed !important;
+    inset: 0 0 auto 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
@@ -335,20 +340,21 @@
   .navbar__inner {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     grid-template-columns: none !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: none !important;
     min-width: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
-    padding-inline: 14px 16px !important;
+    padding-inline: 14px !important;
   }
 
   .navbar__logo {
     grid-column: auto !important;
     justify-self: auto !important;
     flex: 0 0 auto !important;
+    margin: 0 !important;
   }
 
   .navbar__nav {
@@ -363,19 +369,53 @@
     gap: 8px !important;
     flex: 0 0 auto !important;
     margin-left: auto !important;
+    margin-right: 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
   }
 
   .navbar__theme-btn {
     width: 42px !important;
+    margin-left: -40px;
     height: 42px !important;
+    min-width: 42px !important;
     flex: 0 0 42px !important;
     box-sizing: border-box !important;
+    transform: none !important;
   }
 
   .navbar__burger {
+    display: flex !important;
     width: 42px !important;
     height: 42px !important;
+    min-width: 42px !important;
     flex: 0 0 42px !important;
     box-sizing: border-box !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar__inner {
+    padding-inline: 10px !important;
+  }
+
+  .navbar__actions {
+    gap: 6px !important;
+  }
+
+  .navbar__theme-btn {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    flex: 0 0 40px !important;
+  }
+
+  .navbar__burger {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    flex: 0 0 40px !important;
   }
 }
