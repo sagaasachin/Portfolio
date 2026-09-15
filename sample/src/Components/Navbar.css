@@ -377,12 +377,12 @@
 
   .navbar__theme-btn {
     width: 42px !important;
-    margin-left: -40px;
     height: 42px !important;
     min-width: 42px !important;
     flex: 0 0 42px !important;
     box-sizing: border-box !important;
     transform: none !important;
+    margin: 0 !important;
   }
 
   .navbar__burger {
