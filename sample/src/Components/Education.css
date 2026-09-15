@@ -4,8 +4,17 @@
 .education__list {
   margin-top: var(--space-12);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: var(--space-6);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .education__list {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
 }
 .education__item {
   padding: var(--space-8);

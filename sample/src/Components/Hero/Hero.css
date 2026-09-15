@@ -372,16 +372,20 @@
 @media (max-width: 480px) {
   .hero__visual {
     width: min(88vw, 310px);
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .hero__actions {
     flex-direction: column;
     width: 100%;
     max-width: 330px;
+    box-sizing: border-box;
   }
 
   .hero__actions .btn {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .hero__scroll-hint {
