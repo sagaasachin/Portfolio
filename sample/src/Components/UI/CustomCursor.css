@@ -1,0 +1,44 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.custom-cursor__dot {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-gold);
+  border-radius: 50%;
+  transition: transform 0.15s ease-out, background-color 0.2s ease;
+  box-shadow: 0 0 10px rgba(var(--accent-gold-rgb), 0.6);
+}
+
+.custom-cursor__ring {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(var(--accent-gold-rgb), 0.4);
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              background-color 0.2s ease;
+}
+
+.custom-cursor--hover .custom-cursor__dot {
+  transform: scale(0.4);
+  background-color: var(--text-primary);
+}
+
+.custom-cursor--hover .custom-cursor__ring {
+  transform: scale(1.4);
+  border-color: rgba(var(--accent-gold-rgb), 0.8);
+  background-color: rgba(var(--accent-gold-rgb), 0.08);
+}

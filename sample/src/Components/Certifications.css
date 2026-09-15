@@ -1,0 +1,420 @@
+/* =========================================================
+   CERTIFICATIONS SECTION — STRICT 4-COLUMN DESKTOP GRID
+   ========================================================= */
+
+.certs {
+  position: relative;
+  scroll-margin-top: calc(var(--space-20) + 30px);
+  padding-block: var(--section-gap);
+}
+
+/* Header */
+.certs__header {
+  max-width: 760px;
+}
+
+.certs__label-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: var(--space-2);
+}
+
+.certs__label-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-gold);
+  box-shadow: 0 0 8px rgba(var(--accent-gold-rgb), 0.7);
+}
+
+.certs__label-text {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+}
+
+/* STRICT 4-COLUMN DESKTOP GRID (>= 1100px) */
+.certs__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 22px;
+  row-gap: 28px;
+  margin-top: var(--space-8);
+  width: 100%;
+}
+
+/* Premium Equal-Height Credential Card */
+.certs__card {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--color-border);
+  border-top: 2px solid transparent;
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.certs__card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-hover);
+  border-top-color: var(--accent-gold);
+  box-shadow: var(--shadow-md);
+}
+
+/* Logo Area (Fixed 84x72 Size Container) */
+.certs__card-logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.certs__card-logo-wrapper {
+  width: 84px;
+  height: 72px;
+  border-radius: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.certs__card:hover .certs__card-logo-wrapper {
+  transform: translateY(-2px);
+  border-color: var(--color-border-hover);
+}
+
+.certs__card-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.certs__card-logo-wrapper--emblem {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--accent-gold-rgb), 0.08),
+    var(--color-surface)
+  );
+}
+
+.certs__card-emblem-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  text-align: center;
+}
+
+/* Credential Body Metadata */
+.certs__card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.certs__card-category {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  display: block;
+}
+
+.certs__card-title {
+  font-size: clamp(0.98rem, 1.35vw, 1.12rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.012em;
+  min-height: 2.5em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.certs__card-issuer {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+  min-height: 1.4em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Low-Contrast Divider */
+.certs__card-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin-top: auto;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+/* Bottom Action Footer */
+.certs__card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.certs__card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-gold);
+  background: rgba(var(--accent-gold-rgb), 0.06);
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.certs__action-icon {
+  font-size: 0.85rem;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.certs__card:hover .certs__action-icon {
+  transform: translateX(4px);
+}
+
+.certs__card-action:hover {
+  background: rgba(var(--accent-gold-rgb), 0.16);
+  border-color: var(--color-border-hover);
+  color: var(--text-primary);
+}
+
+/* =========================================================
+   REFINED CONSTRAINED MODAL LIGHTBOX
+   ========================================================= */
+
+.certs__modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal, 300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: rgba(0, 0, 0, 0.84);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.certs__modal-container {
+  width: 65vw;
+  max-width: 850px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--color-border-hover);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.certs__modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-glass);
+}
+
+.certs__modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.certs__modal-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  background: rgba(var(--accent-gold-rgb), 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.certs__modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.certs__modal-issuer {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.certs__modal-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.certs__modal-close:hover {
+  background: rgba(var(--accent-gold-rgb), 0.15);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.certs__modal-image-wrapper {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  max-height: 72vh;
+  overflow: hidden;
+}
+
+.certs__modal-image {
+  max-width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* TABLET (768px – 1099px): EXACTLY 2 CARDS PER ROW */
+@media (max-width: 1099px) and (min-width: 768px) {
+  .certs__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 24px;
+  }
+
+  .certs__card {
+    padding: 20px 18px;
+  }
+
+  .certs__modal-container {
+    width: 82vw;
+    max-width: 720px;
+  }
+
+  .certs__modal-image {
+    max-height: 70vh;
+  }
+}
+
+/* MOBILE (<= 767px): EXACTLY 1 CARD PER ROW */
+@media (max-width: 767px) {
+  .certs__grid {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .certs__card {
+    padding: 18px 16px;
+    border-radius: 14px;
+  }
+
+  .certs__card-title {
+    font-size: 1.05rem;
+  }
+
+  .certs__card-logo-wrapper {
+    width: 76px;
+    height: 64px;
+  }
+
+  .certs__modal-backdrop {
+    padding: 16px;
+  }
+
+  .certs__modal-container {
+    width: calc(100% - 24px);
+    border-radius: 16px;
+  }
+
+  .certs__modal-header {
+    padding: 12px 16px;
+  }
+
+  .certs__modal-title {
+    font-size: 0.9rem;
+  }
+
+  .certs__modal-close {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .certs__modal-image-wrapper {
+    padding: 12px;
+    max-height: 68vh;
+  }
+
+  .certs__modal-image {
+    max-height: 64vh;
+  }
+}
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  .certs__card {
+    transition: none !important;
+  }
+
+  .certs__action-icon {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,368 @@
+/* =========================================================
+   NAVBAR & GLOBAL PAGE SCROLL PROGRESS (SENIOR EDITORIAL)
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. GLOBAL TOP SCROLL PROGRESS INDICATOR
+   --------------------------------------------------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 3px;
+  z-index: 300;
+  pointer-events: none;
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.scroll-progress__bar {
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gold);
+  transform-origin: left center;
+  transform: scaleX(0);
+  box-shadow: 0 0 10px rgba(var(--accent-gold-rgb), 0.6);
+  will-change: transform;
+}
+
+/* ---------------------------------------------------------
+   2. FIXED NAVBAR CONTAINER (DESKTOP TRUE CENTERING ≥1024px)
+   --------------------------------------------------------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  z-index: var(--z-nav, 200);
+  padding: 1rem 0;
+  transition: padding 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+}
+
+.navbar--scrolled {
+  padding: 0.65rem 0;
+  background: var(--color-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Desktop Grid: Column 1 (1fr: Logo Start), Column 2 (auto: TRUE CENTER Nav), Column 3 (1fr: Actions End) */
+.navbar__inner {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------
+   3. BRAND MARK (JS LOGO BADGE ONLY - COLUMN 1)
+   --------------------------------------------------------- */
+.navbar__logo {
+  grid-column: 1;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--duration-fast) ease;
+}
+
+.navbar__logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar__logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--accent-gold);
+  background: rgba(var(--accent-gold-rgb), 0.12);
+  color: var(--accent-gold);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 12px rgba(var(--accent-gold-rgb), 0.2);
+  transition: all var(--duration-fast) ease;
+}
+
+.navbar__logo:hover .navbar__logo-badge {
+  box-shadow: 0 0 18px rgba(var(--accent-gold-rgb), 0.45);
+  background: rgba(var(--accent-gold-rgb), 0.22);
+}
+
+/* ---------------------------------------------------------
+   4. DESKTOP NAVIGATION LINKS (COLUMN 2 - TRUE CENTER)
+   --------------------------------------------------------- */
+.navbar__nav {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 2.2vw, 2.25rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color var(--duration-fast) ease;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Thin Gold Underline Pseudo-element */
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2px;
+  background: var(--accent-gold);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 8px rgba(var(--accent-gold-rgb), 0.5);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease;
+  opacity: 0;
+}
+
+.navbar__link:hover {
+  color: var(--accent-gold);
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.navbar__link--active {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.navbar__link--active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------
+   5. RIGHT ACTIONS (THEME TOGGLE & BURGER BUTTON - COLUMN 3)
+   --------------------------------------------------------- */
+.navbar__actions {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+}
+
+.navbar__theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--text-primary);
+  transition: all var(--duration-fast) ease;
+  cursor: pointer;
+}
+
+.navbar__theme-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background: rgba(var(--accent-gold-rgb), 0.08);
+  transform: scale(1.04);
+}
+
+.navbar__theme-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+}
+
+.navbar__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+  position: relative;
+  transform: none !important;
+}
+
+.navbar__burger:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+/* ---------------------------------------------------------
+   6. MOBILE OVERLAY DRAWER
+   --------------------------------------------------------- */
+.navbar__overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  z-index: calc(var(--z-nav, 200) - 1);
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-8);
+  overflow: hidden;
+}
+
+.navbar__overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar__overlay-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-4);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: none;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar__overlay-link:hover,
+.navbar__overlay-link--active {
+  color: var(--accent-gold);
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.navbar__overlay-num {
+  font-size: var(--text-xs);
+  color: var(--accent-gold);
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.navbar__overlay-indicator {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold);
+}
+
+/* ---------------------------------------------------------
+   7. DEDICATED MOBILE NAVBAR BREAKPOINT (<1024px)
+   STRICT VIEWPORT ALIGNMENT:
+   LEFT:  [ JS LOGO ]
+   RIGHT: [ THEME TOGGLE ] [ BURGER MENU ]
+   --------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .navbar--scrolled {
+    padding: 0.55rem 0;
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-inline: 14px 16px;
+  }
+
+  .navbar__logo {
+    grid-column: auto;
+    justify-self: auto;
+    flex-shrink: 0;
+  }
+
+  .navbar__actions {
+    grid-column: auto;
+    justify-self: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .navbar__theme-btn {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+
+  .navbar__burger {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+}
